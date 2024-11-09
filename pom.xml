@@ -8,7 +8,7 @@
   <packaging>jar</packaging>
 
   <name>java-dates</name>
-  <url>http://maven.apache.org</url>
+  <url>https://github.com/evans-p/java-dates-template</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
