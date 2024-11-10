@@ -1,10 +1,13 @@
 package com.evansp;
 
 import java.time.Duration;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.Month;
 import java.time.Period;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
+import java.util.List;
 
 /**
  * Main.
@@ -15,9 +18,18 @@ public class App {
      * @param args args
      */
     public static void main( String[] args)  {
-        durationManagement();
-        periodManagement();
-        dateTimeManagement();
+        workPeriodsManagement();
+    }
+
+    private static void workPeriodsManagement() {
+        LocalDate date = LocalDate.of(2024, Month.NOVEMBER, 11);
+        WorkPeriod workPeriod = WorkPeriods.
+            createMorningWorkPeriod(date);
+
+        System.out.println(workPeriod);
+
+        List<WorkPeriod> workPeriods = WorkPeriods.generateWorkPeriods(date, 10);
+        System.out.println(workPeriods);
     }
 
     /**
